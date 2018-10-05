@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="LabelTime" min="-2" max="-2" attributes="0"/>
+                                  <Component id="LabelInterest" min="-2" max="-2" attributes="0"/>
+                                  <Component id="LabelStartingCapital" min="-2" max="-2" attributes="0"/>
+                                  <Component id="LabelResult" alignment="1" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="FieldResult" pref="99" max="32767" attributes="0"/>
+                                  <Component id="ButtonCalculate" alignment="0" pref="0" max="32767" attributes="0"/>
+                                  <Component id="FieldStartingCapital" max="32767" attributes="0"/>
+                                  <Component id="FieldInterest" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="FieldTime" alignment="0" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="LabelAfterStartingCapital" min="-2" max="-2" attributes="0"/>
+                                  <Component id="LabelAfterInterest" min="-2" max="-2" attributes="0"/>
+                                  <Component id="LabelAfterTime" min="-2" max="-2" attributes="0"/>
+                                  <Component id="LabelAfterResult" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="29" pref="29" max="-2" attributes="0"/>
+                              <Component id="LabelWarnings" min="-2" pref="206" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="83" max="-2" attributes="0"/>
+                      <Component id="LabelTitle" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace pref="51" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+              <Component id="LabelTitle" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="LabelStartingCapital" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="LabelAfterStartingCapital" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="FieldStartingCapital" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="LabelInterest" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="LabelAfterInterest" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="FieldInterest" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="LabelTime" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="LabelAfterTime" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="FieldTime" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="LabelResult" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="FieldResult" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="LabelAfterResult" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="ButtonCalculate" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="LabelWarnings" pref="27" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JLabel" name="LabelStartingCapital">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Anfangskapital"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LabelInterest">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Zinssatz"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LabelTime">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Laufzeit"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LabelResult">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Endkapital"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="ButtonCalculate">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Berechnen"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ButtonCalculateActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="FieldResult">
+    </Component>
+    <Component class="javax.swing.JLabel" name="LabelAfterStartingCapital">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="EUR"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LabelAfterInterest">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="% p.a."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LabelAfterTime">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Jahre"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LabelAfterResult">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="EUR"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LabelTitle">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="F&#xe4;ncy Zinsrechner!"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="LabelWarnings">
+    </Component>
+    <Component class="javax.swing.JFormattedTextField" name="FieldStartingCapital">
+      <Properties>
+        <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor">
+          <Format subtype="0" type="0"/>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="FieldStartingCapitalActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JFormattedTextField" name="FieldInterest">
+      <Properties>
+        <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor">
+          <Format format="#,##0.##" subtype="-1" type="0"/>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="FieldInterestActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JFormattedTextField" name="FieldTime">
+      <Properties>
+        <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor">
+          <Format subtype="0" type="0"/>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="FieldTimeActionPerformed"/>
+      </Events>
+    </Component>
+  </SubComponents>
+</Form>
