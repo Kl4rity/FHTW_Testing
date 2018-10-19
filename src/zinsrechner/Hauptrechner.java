@@ -1,6 +1,8 @@
 package zinsrechner;
 
 import java.text.NumberFormat;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -92,57 +94,60 @@ public class Hauptrechner extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(36, 36, 36)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(36, 36, 36)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(LabelTime)
-                                    .addComponent(LabelInterest)
-                                    .addComponent(LabelStartingCapital)
-                                    .addComponent(LabelResult))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(FieldResult, javax.swing.GroupLayout.DEFAULT_SIZE, 99, Short.MAX_VALUE)
-                                    .addComponent(ButtonCalculate, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                                    .addComponent(FieldStartingCapital)
-                                    .addComponent(FieldInterest)
-                                    .addComponent(FieldTime))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(LabelAfterStartingCapital)
-                                    .addComponent(LabelAfterInterest)
-                                    .addComponent(LabelAfterTime)
-                                    .addComponent(LabelAfterResult)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(29, 29, 29)
-                                .addComponent(LabelWarnings, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(29, 29, 29)
+                        .addComponent(LabelWarnings, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(83, 83, 83)
-                        .addComponent(LabelTitle)))
-                .addContainerGap(51, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(LabelTime)
+                            .addComponent(LabelInterest)
+                            .addComponent(LabelStartingCapital)
+                            .addComponent(LabelResult))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(FieldResult)
+                            .addComponent(ButtonCalculate, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                            .addComponent(FieldStartingCapital, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(FieldInterest)
+                            .addComponent(FieldTime))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(LabelAfterStartingCapital)
+                            .addComponent(LabelAfterInterest)
+                            .addComponent(LabelAfterTime)
+                            .addComponent(LabelAfterResult))))
+                .addGap(73, 73, 73))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(LabelTitle)
+                .addGap(139, 139, 139))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(4, 4, 4)
+                .addContainerGap()
                 .addComponent(LabelTitle)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(LabelStartingCapital)
-                    .addComponent(LabelAfterStartingCapital)
-                    .addComponent(FieldStartingCapital, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(LabelInterest)
-                    .addComponent(LabelAfterInterest)
-                    .addComponent(FieldInterest, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(LabelTime)
-                    .addComponent(LabelAfterTime)
-                    .addComponent(FieldTime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(4, 4, 4)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(LabelStartingCapital)
+                            .addComponent(FieldStartingCapital, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(LabelInterest)
+                            .addComponent(FieldInterest, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(LabelAfterInterest))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(LabelTime)
+                            .addComponent(FieldTime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(LabelAfterTime)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(LabelAfterStartingCapital)
+                        .addGap(66, 66, 66)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(LabelResult)
@@ -151,7 +156,7 @@ public class Hauptrechner extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(ButtonCalculate)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(LabelWarnings, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE)
+                .addComponent(LabelWarnings, javax.swing.GroupLayout.DEFAULT_SIZE, 208, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -159,13 +164,36 @@ public class Hauptrechner extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void ButtonCalculateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonCalculateActionPerformed
+        
+        try {
+            this.checkIfNoFieldNull();
+        } catch (Exception ex) {
+            Logger.getLogger(Hauptrechner.class.getName()).log(Level.SEVERE, null, ex);
+            FieldResult.setText("3RR0R");
+        }
+        
+        
         double startCapital = ((Number)FieldStartingCapital.getValue()).doubleValue();
         double interest = ((Number)FieldInterest.getValue()).doubleValue();
         double time =  ((Number)FieldTime.getValue()).doubleValue();
-        double result = Calculator.calculate(startCapital, interest, time);
-        FieldResult.setText(Double.toString(result));
+        double result;
+        
+        try {
+            result = Calculator.calculate(startCapital, interest, time);
+            FieldResult.setText(Double.toString(result));
+        } catch (Exception ex) {
+            Logger.getLogger(Hauptrechner.class.getName()).log(Level.SEVERE, null, ex);
+            FieldResult.setText("3RR0R");
+        }
     }//GEN-LAST:event_ButtonCalculateActionPerformed
 
+    private void checkIfNoFieldNull() throws Exception{
+        if(FieldStartingCapital.getValue() == null || FieldInterest.getValue() == null || FieldTime.getValue() == null){
+            throw new Exception("One or more fields are empty.");
+        }
+    }
+    
+    
     private void FieldStartingCapitalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FieldStartingCapitalActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_FieldStartingCapitalActionPerformed
