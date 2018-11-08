@@ -4,39 +4,23 @@
  * and open the template in the editor.
  */
 
-import junit.framework.Assert;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
-import org.junit.Rule;
-import org.junit.rules.ExpectedException;
 import zinsrechner.Calculator;
+import org.junit.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
+import org.junit.rules.ExpectedException;
 
 /**
  *
  * @author cstift
  */
 public class CalculatorUnitTest {
-    private Calculator calculator;
     private double startCapital;
     private double interestRate;
     private double time;
     
-    
-    @Before
-    public void setUp(){
-        this.calculator = new Calculator();
-    }
-    
-    @After
-    public void tearDown(){
-        calculator = null;        
-    }
-    
-    @Rule public ExpectedException thrown = ExpectedException.none();
+    @Rule 
+    public ExpectedException thrown= ExpectedException.none();
     
     @Test
     public void calculatesCorrectlyWithValidInputs() throws Exception {
@@ -59,7 +43,7 @@ public class CalculatorUnitTest {
     	thrown.expect(Exception.class);
 	thrown.expectMessage("Starting Capital should be between 2000 and 100000 EUR");
     	
-    	calculator.calculate(startCapital, interestRate, time);
+    	Calculator.calculate(startCapital, interestRate, time);
     	fail("Exception expected");
     }
     
@@ -72,14 +56,9 @@ public class CalculatorUnitTest {
     	thrown.expect(Exception.class);
 	thrown.expectMessage("Starting Capital should be between 2000 and 100000 EUR");
     	
-    	calculator.calculate(startCapital, interestRate, time);
+    	Calculator.calculate(startCapital, interestRate, time);
     	fail("Exception expected");
     }
-    
-//    @Test
-//    public void calculatesWithCapitalInRange(){
-//    
-//    }
     
     @Test
     public void throwsExceptionOnInterestTooLow()  throws Exception{
@@ -90,9 +69,8 @@ public class CalculatorUnitTest {
     	thrown.expect(Exception.class);
 	thrown.expectMessage("Interest rate should be between 0.1 and 8.0 %");
     	
-    	calculator.calculate(startCapital, interestRate, time);
+    	Calculator.calculate(startCapital, interestRate, time);
     	fail("Exception expected");
-        
     }
     
     @Test
@@ -104,14 +82,9 @@ public class CalculatorUnitTest {
     	thrown.expect(Exception.class);
 	thrown.expectMessage("Interest rate should be between 0.1 and 8.0 %");
     	
-    	calculator.calculate(startCapital, interestRate, time);
+    	Calculator.calculate(startCapital, interestRate, time);
     	fail("Exception expected");    
     }
-    
-//    @Test
-//    public void interestWithinRange(){
-//    
-//    }
     
     @Test
     public void throwsExceptionOnTimeTooLow()  throws Exception{
@@ -122,7 +95,7 @@ public class CalculatorUnitTest {
     	thrown.expect(Exception.class);
 	thrown.expectMessage("Time should be between 2 and 40 years");
     	
-    	calculator.calculate(startCapital, interestRate, time);
+    	Calculator.calculate(startCapital, interestRate, time);
     	fail("Exception expected");
     }
     
@@ -135,12 +108,7 @@ public class CalculatorUnitTest {
     	thrown.expect(Exception.class);
 	thrown.expectMessage("Time should be between 2 and 40 years");
     	
-    	calculator.calculate(startCapital, interestRate, time);
+    	Calculator.calculate(startCapital, interestRate, time);
     	fail("Exception expected");    
     }
-    
-//    @Test
-//    public void timeWithinRange(){
-//    
-//    }
 }

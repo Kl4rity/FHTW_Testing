@@ -1,6 +1,5 @@
 package zinsrechner;
 
-import java.text.NumberFormat;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -13,7 +12,38 @@ public class Hauptrechner extends javax.swing.JFrame {
     public Hauptrechner() {
         initComponents();
         FieldResult.disable();
-        
+    }
+    
+    public void pressButton(){
+        this.ButtonCalculateActionPerformed(null);
+    }
+    
+    public void setFieldStartingCapitalValue(int startingCapital){
+        FieldStartingCapital.setValue(startingCapital);
+    }
+    
+    public String getFieldStartingCapitalValue(){
+        return (String)FieldStartingCapital.getValue();
+    }
+    
+    public void setFieldInterestValue(int interest){
+        FieldInterest.setValue(interest);
+    }
+    
+    public String getFieldInterestValue(){
+        return (String)FieldInterest.getValue();
+    } 
+    
+    public void setFieldTimeValue(int time){
+        FieldTime.setValue(time);
+    }
+    
+    public String getFieldTimeValue(){
+        return (String)FieldTime.getValue();
+    }
+    
+    public String getFieldResultValue() {
+        return (String)FieldResult.getText();
     }
 
     /**
@@ -164,11 +194,11 @@ public class Hauptrechner extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void ButtonCalculateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonCalculateActionPerformed
-        
+                
         try {
             this.checkIfNoFieldNull();
         } catch (Exception ex) {
-            Logger.getLogger(Hauptrechner.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Hauptrechner.class.getName()).log(Level.SEVERE, ex.getMessage(), ex);
             FieldResult.setText("3RR0R");
         }
         
@@ -192,7 +222,6 @@ public class Hauptrechner extends javax.swing.JFrame {
             throw new Exception("One or more fields are empty.");
         }
     }
-    
     
     private void FieldStartingCapitalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FieldStartingCapitalActionPerformed
         // TODO add your handling code here:

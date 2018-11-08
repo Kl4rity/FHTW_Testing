@@ -4,12 +4,11 @@
  * and open the template in the editor.
  */
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
+import org.junit.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
+import org.junit.rules.ExpectedException;
+import zinsrechner.Hauptrechner;
 
 /**
  *
@@ -17,17 +16,61 @@ import static org.junit.Assert.*;
  */
 public class HauptrechnerUnitTest {
     
-    public HauptrechnerUnitTest() {
-        // renders.
+    private Hauptrechner hauptrechner;
+    
+    @Rule 
+    public ExpectedException thrown= ExpectedException.none();
+    
+    @Before
+    public void setup(){
+        hauptrechner = new Hauptrechner();
+    }
+    
+    @After
+    public void tearDown(){
+        hauptrechner = null;
+    }
+    
+    
+    @Test
+    public void callsCalculatorInCaseAllFieldsAreSetCorrectly() {
+        String expected = "5202.0";
+        String actual;
+        
+        hauptrechner.setFieldStartingCapitalValue(5000);
+        hauptrechner.setFieldInterestValue(2);
+        hauptrechner.setFieldTimeValue(2);
+        
+        hauptrechner.pressButton();
+        
+        actual = hauptrechner.getFieldResultValue();
+        
+        assertEquals(expected, actual);
     }
     
     @Test
-    public void allFieldsSet() {
-    
+    public void throwsExceptionInCaseOfEmptyField(){
+        hauptrechner.setFieldStartingCapitalValue(5000);
+        hauptrechner.setFieldInterestValue(2);
+        
+        thrown.expect(Exception.class);
+        
+        hauptrechner.pressButton();
+        
+        fail("Exception expected");
     }
     
     @Test
-    public void aFieldIsNull(){
-    
+    public void setsResultToErrorIfExceptionIsThrownInCalculator(){
+        String expected = "3RR0R";
+        String actual = null;
+        
+        try {
+            hauptrechner.pressButton();
+        } catch (Exception ex) {
+            actual = hauptrechner.getFieldResultValue();
+        }
+        
+        assertEquals(expected, actual);
     }
 }
